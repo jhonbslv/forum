@@ -33,7 +33,6 @@ body {
     }
 }
 
-/* Títulos */
 h1 {
     font-size: 2.5rem;
     color: #667eea;
@@ -53,7 +52,6 @@ h2:hover {
     color: #667eea;
 }
 
-/* Links principais */
 a[href="/create"] {
     display: inline-block;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -72,7 +70,6 @@ a[href="/create"]:hover {
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
-/* Posts na listagem */
 .post-item, div:has(.post-id) {
     background: #f7fafc;
     border-radius: 15px;
@@ -95,7 +92,6 @@ div:has(.post-id):hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Texto do post */
 p {
     color: #4a5568;
     line-height: 1.6;
@@ -108,7 +104,6 @@ p:last-of-type {
     margin-top: 10px;
 }
 
-/* Links de ação */
 a[href^="/post/"],
 a[href^="/edit/"] {
     display: inline-block;
@@ -141,7 +136,6 @@ a[href^="/edit/"]:hover {
     transform: scale(1.05);
 }
 
-/* Botão excluir */
 form[style*="inline"] button {
     background: #f56565;
     color: white;
@@ -159,7 +153,6 @@ form[style*="inline"] button:hover {
     transform: scale(1.05);
 }
 
-/* HR decorativo */
 hr {
     border: none;
     height: 2px;
@@ -167,7 +160,6 @@ hr {
     margin: 20px 0;
 }
 
-/* Página de post completo */
 .post-full {
     background: #f7fafc;
     border-radius: 15px;
@@ -199,7 +191,6 @@ hr {
     border-top: 2px solid #e2e8f0;
 }
 
-/* Botão voltar */
 a[href="/"]:not(a[href="/create"]) {
     display: inline-block;
     background: #718096;
@@ -217,7 +208,6 @@ a[href="/"]:not(a[href="/create"]):hover {
     transform: translateX(-3px);
 }
 
-/* Formulários */
 .form-box {
     background: #f7fafc;
     border-radius: 15px;
@@ -281,7 +271,6 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     body {
         padding: 20px 10px;
@@ -311,12 +300,10 @@ button[type="submit"]:hover {
     }
 }
 
-/* Efeito de loading suave para interações */
 button, a {
     cursor: pointer;
 }
 
-/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 10px;
 }
