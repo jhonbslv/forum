@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #667eea;
+}
+
+/* Links principais */
+a[href="/create"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+a[href="/create"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Posts na listagem */
+.post-item, div:has(.post-id) {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+div:has(.post-id):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #c3dafe;
+}
+
+.post-id {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    margin-bottom: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Texto do post */
+p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+p:last-of-type {
+    font-style: italic;
+    color: #718096;
+    margin-top: 10px;
+}
+
+/* Links de ação */
+a[href^="/post/"],
+a[href^="/edit/"] {
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+a[href^="/post/"] {
+    background: #48bb78;
+    color: white;
+}
+
+a[href^="/post/"]:hover {
+    background: #38a169;
+    transform: scale(1.05);
+}
+
+a[href^="/edit/"] {
+    background: #4299e1;
+    color: white;
+}
+
+a[href^="/edit/"]:hover {
+    background: #3182ce;
+    transform: scale(1.05);
+}
+
+/* Botão excluir */
+form[style*="inline"] button {
+    background: #f56565;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form[style*="inline"] button:hover {
+    background: #e53e3e;
+    transform: scale(1.05);
+}
+
+/* HR decorativo */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c3dafe, transparent);
+    margin: 20px 0;
+}
+
+/* Página de post completo */
+.post-full {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.post-full h1 {
+    text-align: left;
+    color: #2d3748;
+    border-left: 5px solid #667eea;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.post-full p:nth-of-type(1) {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin: 20px 0;
+    white-space: pre-wrap;
+}
+
+.post-full p:last-of-type {
+    font-style: normal;
+    color: #764ba2;
+    font-weight: 500;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+}
+
+/* Botão voltar */
+a[href="/"]:not(a[href="/create"]) {
+    display: inline-block;
+    background: #718096;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a[href="/"]:not(a[href="/create"]):hover {
+    background: #4a5568;
+    transform: translateX(-3px);
+}
+
+/* Formulários */
+.form-box {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.form-box a[href="/"] {
+    display: inline-block;
+    background: #a0aec0;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-box a[href="/"]:hover {
+    background: #718096;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    a[href^="/post/"],
+    a[href^="/edit/"],
+    form[style*="inline"] button {
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    
+    .post-id {
+        font-size: 0.75rem;
+    }
+}
+
+/* Efeito de loading suave para interações */
+button, a {
+    cursor: pointer;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46a0);
+}
