@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Post</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Novo Post</h1>
+
+    <div class="form-box">
+        <form action="/create" method="post">
+            <input type="text" name="id" placeholder="Id" required>
+            <input type="text" name="titulo" placeholder="Título" required>
+            <input type="text" name="resumo" placeholder="Resumo" required>
+            <textarea name="conteudo" placeholder="Conteúdo" rows="8" required></textarea>
+            <input type="text" name="autor" placeholder="Autor" required>
+
+            <button type="submit">Salvar</button>
+            <a href="/">Cancelar</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>
